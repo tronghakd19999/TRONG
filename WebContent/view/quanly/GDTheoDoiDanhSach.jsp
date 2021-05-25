@@ -68,7 +68,7 @@ if (listkh != null) {
 										<td>
 											<button class="btn btn-info" type="button"
 												data-toggle="tooltip" data-placement="left"
-												title="Xem chi tiết"
+												title="Xem chi tiết" name="show" id=<%=listkh.get(i).getId()%>
 												onclick="location.href='GDChiTietDongThue.jsp?id=<%=listkh.get(i).getId()%>';">
 												<i class="fas fa-receipt"></i>
 											</button>

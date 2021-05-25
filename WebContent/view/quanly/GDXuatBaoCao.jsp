@@ -51,7 +51,7 @@
 										 <td>
 											<button class="btn btn-info" type="button"
 												data-toggle="tooltip" data-placement="left"
-												title="Xuất báo cáo"
+												title="Xuất báo cáo" id=1
 												onclick="location.href='GDXuatBaoCaoDu.jsp?id=1';">
 												<i class="fas fa-receipt"></i>
 											</button>
@@ -59,12 +59,26 @@
 									</tr>
 									<tr>
 										<td><%=2%></td>
+										<td>Danh sách khách hàng đóng thuế muộn</td>
+
+										 <td>
+											<button class="btn btn-info" type="button"
+												data-toggle="tooltip" data-placement="left"
+												title="Xuất báo cáo" id=2
+												onclick="location.href='GDXuatBaoCaoMuon.jsp?id=2';">
+												<i class="fas fa-receipt"></i>
+											</button>
+										</td> 
+									</tr>
+									
+									<tr>
+										<td><%=3%></td>
 										<td>Danh sách khách hàng đóng thuế thiếu</td>
 
 										 <td>
 											<button class="btn btn-info" type="button"
 												data-toggle="tooltip" data-placement="left"
-												title="Xuất báo cáo"
+												title="Xuất báo cáo" id=3
 												onclick="location.href='GDXuatBaoCaoThieu.jsp?id=2';">
 												<i class="fas fa-receipt"></i>
 											</button>

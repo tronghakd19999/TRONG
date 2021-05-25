@@ -18,7 +18,7 @@ Vung vung = (new VungDAO()).getEditVung(id);
 	%>
 	<form method="post" action="update_process.jsp">
 		Khu vực vùng:<br>
-		<input type="number" name="id"
+		<input type="number" name="id" id=<%=vung.getValue() %>
 			value="<%=vung.getValue() %>" 
 			disable="true"> <br>
 		Mức tối thiểu:<br> 

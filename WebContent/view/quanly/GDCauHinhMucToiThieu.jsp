@@ -40,7 +40,7 @@ if (listVung != null) {
 					</div>
 					<div class="card-body">
 						<form>
-							<table class="table">
+							<table class="table" id="bang_cau_hinh">
 								<thead>
 									<tr>
 										<th>T.T</th>
@@ -59,7 +59,7 @@ if (listVung != null) {
 										<td>
 											<button class="btn btn-info" type="button"
 												data-toggle="tooltip" data-placement="left"
-												title="Sửa"
+												title="Sửa" id=<%=listVung.get(i).getId()%>
 												onclick="location.href='GDSuaVung.jsp?id=<%=listVung.get(i).getId()%>';">
 												<i class="fas fa-receipt"></i>
 											</button>

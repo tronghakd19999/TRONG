@@ -12,7 +12,7 @@ public class HoSoThueDAO extends DAO{
 		super();
 	}
 	private static final String  GetHoSoById = "Select distinct a.ID, a.GhiChu, b.ID as LichSuID, b.SoTienNop, b.NgayNop, b.GhiChu as LichSuGhiChu, b.HanNop, b.TrangThai"
-			+ " from hosothue a, lichsuthue b where a.ID = b.ID and a.KhachHangID = ";
+			+ " from hosothue a, lichsuthue b where a.ID = b.ID and a.KhachHangID = ?";
 	
 	public HoSoThue getHoSoByKhachHangId(int id) throws SQLException {
 		try {

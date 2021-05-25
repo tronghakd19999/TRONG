@@ -24,12 +24,12 @@ public class Vung {
 	}
 	
 	public Vung() {
-		
+		super();
 	}
 	public Vung(int id, int value, float mucToiThieu) {
 		Id = id;
 		Value = value;
 		MucToiThieu = mucToiThieu;
 	}
-	
+
 }

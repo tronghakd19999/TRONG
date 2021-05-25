@@ -17,7 +17,7 @@ listkh = (new BaoCaoThueDAO()).getAllKhachHangDongThueThieu();
 <jsp:include page="../include.jsp" />
 <!--Custom styles-->
 <link rel="stylesheet" href="../vendor/css/main_view.css">
-<title> Xuất báo cáo thuế TNCN</title>
+<title> Xuất báo cáo thuế cá nhân nộp thiếu</title>
 </head>
 <%
 if (listkh != null ) {
@@ -51,7 +51,7 @@ if (listkh != null ) {
 										<th>Địa chỉ</th>
 										<th>Nghề</th>
 										<th>Mức lương</th>
-										<th>Tiền đóng thuế</th>
+										<th>Tiền đóng thuế hiện thời</th>
 													
 									</tr>
 								</thead>

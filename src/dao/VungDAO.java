@@ -67,19 +67,38 @@ public class VungDAO extends DAO{
 		try {
 			Connection connection = getConnection();
 			// try-with-resource statement will auto close the connection.
-			PreparedStatement preparedStatement = connection.prepareStatement(GET_AREA);
-			//preparedStatement.setString(1, contractTypeId);
-			//preparedStatement.setString(2, contractTypeId);
+			PreparedStatement preparedStatement = connection.prepareStatement(GET__S_VUNG);
+			preparedStatement.setString(1, VungID);
 			ResultSet resultSet = preparedStatement.executeQuery();
-			ArrayList<Vung> listGrade = new ArrayList<>();
+			ArrayList<Vung> listVung = new ArrayList<Vung>();
 			while (resultSet.next()) {
 				Vung vung = new Vung();
+				vung.setValue(resultSet.getInt("Value"));
 				vung.setMucToiThieu(resultSet.getFloat("muctoithieu"));
-				//grade.setPrice(resultSet.getFloat("price"));
-				//grade.setValue(resultSet.getInt("value"));
-				listGrade.add(vung);
+				listVung.add(vung);
 			}
-			return listGrade;
+			return listVung;
+		} catch (SQLException e) {
+			e.printStackTrace();
+			return null;
+		}
+	}
+	
+	public Vung getCheckVung(String VungID) throws SQLException {
+		try {
+			Connection connection = getConnection();
+			// try-with-resource statement will auto close the connection.
+			PreparedStatement preparedStatement = connection.prepareStatement(GET__S_VUNG);
+			preparedStatement.setString(1, VungID);
+			ResultSet resultSet = preparedStatement.executeQuery();
+//			ArrayList<Vung> listVung = new ArrayList<Vung>();
+			Vung vung = new Vung();
+			while (resultSet.next()) {
+				vung.setValue(resultSet.getInt("ID"));
+				vung.setMucToiThieu(resultSet.getFloat("muctoithieu"));
+//				listVung.add(vung);
+			}
+			return vung;
 		} catch (SQLException e) {
 			e.printStackTrace();
 			return null;
