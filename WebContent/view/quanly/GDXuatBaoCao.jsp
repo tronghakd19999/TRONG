@@ -16,7 +16,7 @@
 </head>
 
 <body>
-	<h3>Xuất báo cóa theo tháng đóng tiền thuế tháng 2</h3>
+	<h3>Xuất báo cáo theo tháng đóng tiền thuế tháng 2</h3>
 	<div class="d-flex" id="wrapper">
 
 		<%@include file="menu.jsp"%>
@@ -51,7 +51,7 @@
 										 <td>
 											<button class="btn btn-info" type="button"
 												data-toggle="tooltip" data-placement="left"
-												title="Xuất báo cáo" id=1
+												title="Xem báo cáo" id=1
 												onclick="location.href='GDXuatBaoCaoDu.jsp?id=1';">
 												<i class="fas fa-receipt"></i>
 											</button>
@@ -64,7 +64,7 @@
 										 <td>
 											<button class="btn btn-info" type="button"
 												data-toggle="tooltip" data-placement="left"
-												title="Xuất báo cáo" id=2
+												title="Xem báo cáo" id=2
 												onclick="location.href='GDXuatBaoCaoMuon.jsp?id=2';">
 												<i class="fas fa-receipt"></i>
 											</button>
@@ -78,8 +78,8 @@
 										 <td>
 											<button class="btn btn-info" type="button"
 												data-toggle="tooltip" data-placement="left"
-												title="Xuất báo cáo" id=3
-												onclick="location.href='GDXuatBaoCaoThieu.jsp?id=2';">
+												title="Xem báo cáo" id=3
+												onclick="location.href='GDXuatBaoCaoThieu.jsp?id=3';">
 												<i class="fas fa-receipt"></i>
 											</button>
 										</td> 

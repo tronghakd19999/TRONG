@@ -9,16 +9,18 @@ String id = request.getParameter("id");
 String mucToiThieu = request.getParameter("muctoithieu");
 Vung vung = new Vung();
 float mucToiThieuVung = Float.parseFloat(mucToiThieu);
-int idVung = Integer.parseInt(id);
-vung.setId(idVung);
+int idVung = (Integer)session.getAttribute("Vungid");
+
+vung = (Vung)session.getAttribute("Vung");
 vung.setMucToiThieu(mucToiThieuVung);
 
 VungDAO vungDao = new VungDAO();
 boolean result = vungDao.saveVung(vung);
 if(result == true){
-	response.sendRedirect("GDChinhNVQuanly.jsp?result=gradeSuccess");
+	response.sendRedirect("GDChinhNVQuanly.jsp?result=SaveSuccess");
 }
 else{
-	response.sendRedirect("GDChinhNVQuanly.jsp?result=gradeFail");
+	response.sendRedirect("GDChinhNVQuanly.jsp?result=SaveFail");
 }
 %>
+

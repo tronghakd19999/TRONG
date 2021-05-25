@@ -1,4 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
+<%-- <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <!-- Sidebar -->
 <div class="bg-light border-right" id="sidebar-wrapper">
@@ -8,4 +8,4 @@
 		
 	</div>
 </div>
-<!-- /#sidebar-wrapper -->
+<!-- /#sidebar-wrapper --> --%>

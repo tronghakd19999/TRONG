@@ -66,14 +66,18 @@ public class TestLichSuThueDAO {
 		try {
 			int id = 4;
 			ArrayList<LichSuThue> lichSuThue = testLichSuThue.getThueCaNhanKhachHangId(id);
-			System.out.println(lichSuThue.get(0).getNgayNop());
-			assertTrue(lichSuThue.get(0).getNgayNop().equals("2021-02-10"));
-			assertTrue(lichSuThue.get(1).getTrangThai().equals("Dang nop"));
-			assertTrue(lichSuThue.get(1).getGhiChu().equals("Nop thieu"));
+			System.out.println(lichSuThue.get(3).getNgayNop());
+			assertTrue(lichSuThue.get(3).getNgayNop().equals("2021-02-10"));
+			assertTrue(lichSuThue.get(3).getTrangThai().equals("Dang nop"));
+			assertTrue(lichSuThue.get(3).getGhiChu().equals("Nop thieu"));
 			
 			assertTrue(lichSuThue.get(2).getNgayNop().equals("2021-02-13"));
 			assertTrue(lichSuThue.get(2).getTrangThai().equals("Dang nop muon"));
 			assertTrue(lichSuThue.get(2).getGhiChu().equals("Nop thieu"));
+			
+			assertTrue(lichSuThue.get(1).getNgayNop().equals("2021-02-16"));
+			assertTrue(lichSuThue.get(1).getTrangThai().equals("Dang nop"));
+			assertTrue(lichSuThue.get(1).getGhiChu().equals("Nop thieu"));
 		} catch (Exception e) {
 			// TODO: handle exception
 		}

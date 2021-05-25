@@ -6,6 +6,7 @@
 <%
 int id = Integer.parseInt(request.getParameter("id").toString());
 Vung vung = (new VungDAO()).getEditVung(id);
+session.setAttribute("Vung", vung);
 %>
 
 <!DOCTYPE html>
@@ -19,15 +20,15 @@ Vung vung = (new VungDAO()).getEditVung(id);
 	<form method="post" action="update_process.jsp">
 		Khu vực vùng:<br>
 		<input type="number" name="id" id=<%=vung.getValue() %>
-			value="<%=vung.getValue() %>" 
-			disable="true"> <br>
+			value="<%=vung.getValue() %>" maxlength="2"> <br>
 		Mức tối thiểu:<br> 
 		<input maxlength="8" 
 			type="number"
 			name = "muctoithieu" 
 			value="<%=vung.getMucToiThieu()%>" 
+			min="1000000"
 			/> 
-			<input type="submit"
+			<input type="submit" id="input"
 			value="save">
 	</form>
 	<%

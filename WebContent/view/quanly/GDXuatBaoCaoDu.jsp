@@ -49,7 +49,6 @@ if (listkh != null ) {
 										<th>Mã số thuế</th>
 										<th>Số điện thoại</th>
 										<th>Địa chỉ</th>
-										<th>Nghề</th>
 										<th>Mức lương</th>
 										<th>Tiền đóng thuế</th>
 													
@@ -65,7 +64,6 @@ if (listkh != null ) {
 										<td><%=listkh.get(i).getMST()%></td>
 										<td><%=listkh.get(i).getPhone()%></td>
 										<td><%=listkh.get(i).getAddress()%></td>
-										<td><%=listkh.get(i).getJob()%></td>
 										<td><%=listkh.get(i).getSalary()%></td>
 										<td><%=listkh.get(i).getTaxValue()%></td> 
 										

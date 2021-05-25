@@ -28,17 +28,16 @@ public class TestVungDAO extends DAO{
 			
 			ArrayList<Vung> vungTest = new ArrayList<Vung>();
 
-			//Fake data
-			Vung vungCheck = vungDAO.getEditVung(1);
+			//Fake data			
 			Vung vungCheck2 = new Vung(1, 1, 4430000);
-			vungTest.add(new Vung(0, 1, 4430000));
-			vungDAO.saveVung(vungCheck);
+			vungTest.add(vungCheck2);
+			vungDAO.saveVung(vungCheck2);
 			
-			Vung vungReal = vungDAO.getEditVung(0);
-			ArrayList<Vung> realData = vungDAO.getVung("1");
-			realData.add(vungReal);
+			Vung vungCheck = vungDAO.getEditVung(1);
+			ArrayList<Vung> realData = new ArrayList<Vung>();
+			realData.add(vungCheck);
 			
-			assertEquals(vungTest, vungReal);
+			assertEquals(vungCheck, realData);
 			
 		} finally {
 			connection.rollback();
@@ -82,11 +81,9 @@ public class TestVungDAO extends DAO{
 		try {
 			
 			Vung vungTest = new Vung(1, 1, 4430000);
-			vungDAO.saveVung(vungTest);
-			Vung vungReal = vungDAO.getEditVung(1);
-
-			
-			assertEquals(vungReal, vungTest);
+			boolean save = vungDAO.saveVung(vungTest);
+		
+			assertEquals(save, true);
 			
 		} finally {
 			connection.rollback();

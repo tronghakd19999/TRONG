@@ -22,7 +22,7 @@
 		<div id="page-content-wrapper">
 
 			<%@include file="navbar.jsp"%>
-			<p>HỆ THỐNG HỖ TRỢ TÍNH THUẾ THU NHẬP CÁ NHÂN</p>
+			<h1>HỆ THỐNG HỖ TRỢ TÍNH THUẾ THU NHẬP CÁ NHÂN</h1>
 		</div>
 		<!-- /#page-content-wrapper -->
 

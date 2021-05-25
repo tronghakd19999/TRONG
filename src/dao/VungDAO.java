@@ -20,9 +20,10 @@ public class VungDAO extends DAO{
 	private static final String GET__S_VUNG = "select vung.* "
 											+ "from sqa_new.vung "
 											+ "where id = ?;";
-	private static final String UPDATE_AREA = "update vung \r\n" + 
-											  "set MucToiThieu = ?\r\n" + 
-											  "where id = ?;";
+	private static final String UPDATE_AREA = "update sqa_new.vung \r\n" + 
+											  "set vung.MucToiThieu = ?,\r\n" + 
+											  "vung.Value = ?\r\n" +
+											  "where vung.id = ?;";
 
 	public ArrayList<Vung> getAllVung() throws SQLException {
 		try {
@@ -112,7 +113,8 @@ public class VungDAO extends DAO{
 			// try-with-resource statement will auto close the connection.
 			PreparedStatement preparedStatement = connection.prepareStatement(UPDATE_AREA);
 			preparedStatement.setFloat(1, vung.getMucToiThieu());
-			preparedStatement.setFloat(2, vung.getId());
+			preparedStatement.setInt(2, vung.getValue());
+			preparedStatement.setInt(3, vung.getId());
 			Update = preparedStatement.executeUpdate() > 0;
 
 		} catch (SQLException e) {
